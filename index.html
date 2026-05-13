@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Copilot AI Credits 計算機</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+    <noscript>このページの計算機能を利用するには JavaScript を有効にしてください。</noscript>
+    <main class="container">
+      <header class="header">
+        <h1>GitHub Copilot AI Credits 計算機</h1>
+        <button id="language-switch" class="lang-switch" data-target="./en/">English</button>
+      </header>
+
+      <p class="lead">消費トークン数からモデルごとの料金（USD）と AI Credits を推定します。</p>
+
+      <form id="calculator-form" class="card">
+        <div class="grid">
+          <label>Input tokens
+            <input id="input-tokens" type="number" min="0" step="1" value="1000000" required>
+          </label>
+          <label>Cached input tokens
+            <input id="cached-input-tokens" type="number" min="0" step="1" value="0">
+          </label>
+          <label>Output tokens
+            <input id="output-tokens" type="number" min="0" step="1" value="0">
+          </label>
+          <label>Cache write tokens
+            <input id="cache-write-tokens" type="number" min="0" step="1" value="0">
+          </label>
+        </div>
+        <p id="error-message" class="error" aria-live="polite"></p>
+        <button type="submit">計算する</button>
+      </form>
+
+      <section class="card">
+        <h2>計算結果</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Model</th>
+                <th>Input ($/1M)</th>
+                <th>Cached ($/1M)</th>
+                <th>Output ($/1M)</th>
+                <th>Cache Write ($/1M)</th>
+                <th>料金 (USD)</th>
+                <th>AI Credits</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>参考リンク</h2>
+        <ul>
+          <li><a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing" target="_blank" rel="noreferrer">Models and pricing</a></li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals" target="_blank" rel="noreferrer">Usage-based billing for individuals</a></li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises" target="_blank" rel="noreferrer">Usage-based billing for organizations and enterprises</a></li>
+        </ul>
+      </section>
+    </main>
+    <script src="./assets/calculator-core.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

@@ -12,6 +12,9 @@ GitHub Copilotでは2026年6月1日から、トークン消費量ベースの料
 価格設定の仕組みや価格表はこのページに記載されています。  
 https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing
 
+実装上の `MODEL_PRICING` は、上記ページの表に掲載されているモデルのみを対象にします（OpenAI / Anthropic / Google / xAI / Fine-tuned (GitHub)）。
+表にないモデル名や、表にないモデルを参照する注記は含めません。
+
 ## 機能
 
 以下の含んだ機能を実装します。
