@@ -34,3 +34,7 @@ npm test
 
 1. テスト実行（`npm test`）
 2. 成功時に Pages へデプロイ
+
+## English Version
+
+For the English version of this README, please refer to [en/README.md](en/README.md).
