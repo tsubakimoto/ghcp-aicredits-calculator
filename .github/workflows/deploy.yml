@@ -40,7 +40,7 @@ jobs:
           cp -r assets/* site/assets/
           cp -r en/* site/en/
           cp -r img/* site/img/
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deployment
